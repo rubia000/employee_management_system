@@ -24,6 +24,7 @@ Install:
 a)Open your MySQL client and create a database named employee_db:
 `   CREATE DATABASE employee_db;
 `
+
 b)Open the configuration file located at src/main/resources/application.yml (or application.properties) and update your MySQL username and password:
   ` spring:
    datasource:
