@@ -1,5 +1,7 @@
 **Employee Management System REST API**
-A simple,REST API built with Spring Boot to manage Employee records.It features complete CRUD operations,input validation and exception handling.
+
+A simple,REST API built with Spring Boot to manage Employee records.
+It features complete CRUD operations,input validation and exception handling.
 # Tech Stack
 * Java 17
 * Spring Boot
@@ -8,7 +10,8 @@ A simple,REST API built with Spring Boot to manage Employee records.It features 
 * Maven
 # Setup & Installation Instructions
 Follow the instructions below to run the project locally on your machine:
-1. Prerequisites
+1. Prerequisites-
+
 Install:
 * Java 17 or higher
 * Maven
