@@ -67,3 +67,106 @@ spring.datasource.password=your_mysql_password
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect`
+
+# Sample requests and responses:
+
+### 1. Get All Employees (`GET /api/employees`)
+* **Response (`200 OK`):**
+  ```json
+  [
+      {
+          "id": 1,
+          "firstName": "kiran",
+          "lastName": "Dev",
+          "email": "kiran.dev@gmail.com",
+          "department": "Engineering",
+          "salary": 75000.0
+      },
+      {
+          "id": 2,
+          "firstName": "mini",
+          "lastName": "terese",
+          "email": "mini.terese@gmail.com",
+          "department": "ElectricalEngineering",
+          "salary": 65000.0
+      },
+      {
+          "id": 3,
+          "firstName": "arjun",
+          "lastName": "krishna",
+          "email": "arjun.krishna@gmail.com",
+          "department": "marketing",
+          "salary": 50000.0
+      },
+      {
+          "id": 4,
+          "firstName": "dona",
+          "lastName": "mathew",
+          "email": "dona.mathew@gmail.com",
+          "department": "FullStackDevelopment",
+          "salary": 55000.0
+      }
+  ]
+
+2. Get Employee by ID (GET /api/employees/2)
+   Response (200 OK):
+
+JSON
+`{
+"id": 2,
+"firstName": "mini",
+"lastName": "terese",
+"email": "mini.terese@gmail.com",
+"department": "ElectricalEngineering",
+"salary": 65000.0
+}`
+3. Create Employee (POST /api/employees)
+   Request Body (application/json):
+
+JSON
+`{
+"firstName": "Akash",
+"lastName": "M",
+"email": "akash.m@example.com",
+"department": "ProjectManagement",
+"salary": 77000.0
+}`
+Response (201 Created or 200 OK):
+
+JSON
+`{
+"id": 5,
+"firstName": "Akash",
+"lastName": "M",
+"email": "akash.m@example.com",
+"department": "ProjectManagement",
+"salary": 77000.0
+}`
+4. Update Employee (PUT /api/employees/5)
+   Request Body (application/json):
+
+JSON
+`{
+"firstName": "Akash",
+"lastName": "K",
+"email": "akash.k@gmail.com",
+"department": "ProjectManagement",
+"salary": 77000.0
+}`
+Response (200 OK):
+
+JSON
+`{
+"id": 5,
+"firstName": "Akash",
+"lastName": "K",
+"email": "akash.k@gmail.com",
+"department": "ProjectManagement",
+"salary": 77000.0
+}`
+5. Delete Employee (DELETE /api/employees/5)
+   Endpoint: http://localhost:8080/api/employees/5
+
+Response (204 No Content or 200 OK):
+
+Employee deleted successfully 
