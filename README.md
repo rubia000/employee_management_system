@@ -71,9 +71,9 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect`
 # Sample requests and responses:
 
 ### 1. Get All Employees (`GET /api/employees`)
-* **Response (`200 OK`):**
-  ```json
-  [
+Response (`200 OK`):
+  json
+  `[
       {
           "id": 1,
           "firstName": "kiran",
@@ -106,9 +106,9 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect`
           "department": "FullStackDevelopment",
           "salary": 55000.0
       }
-  ]
+  ]`
 
-2. Get Employee by ID (GET /api/employees/2)
+**2. Get Employee by ID (GET /api/employees/2)**
    Response (200 OK):
 
 JSON
@@ -120,7 +120,10 @@ JSON
 "department": "ElectricalEngineering",
 "salary": 65000.0
 }`
-3. Create Employee (POST /api/employees)
+
+
+**3. Create Employee (POST /api/employees)**
+
    Request Body (application/json):
 
 JSON
@@ -131,7 +134,8 @@ JSON
 "department": "ProjectManagement",
 "salary": 77000.0
 }`
-Response (201 Created or 200 OK):
+
+Response (201 Created ):
 
 JSON
 `{
@@ -142,7 +146,10 @@ JSON
 "department": "ProjectManagement",
 "salary": 77000.0
 }`
-4. Update Employee (PUT /api/employees/5)
+
+
+**4. Update Employee (PUT /api/employees/5)**
+
    Request Body (application/json):
 
 JSON
@@ -164,9 +171,12 @@ JSON
 "department": "ProjectManagement",
 "salary": 77000.0
 }`
-5. Delete Employee (DELETE /api/employees/5)
+
+
+**5. Delete Employee (DELETE /api/employees/5)**
+
    Endpoint: http://localhost:8080/api/employees/5
 
-Response (204 No Content or 200 OK):
+Response (200 OK):
 
 Employee deleted successfully 
