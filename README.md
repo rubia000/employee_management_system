@@ -33,12 +33,13 @@ Open the project in your IDE.
 You can test using Postman with the following base URL:
 http://localhost:8080/api/employees
 
-**Operation**               **HTTP Method**                **Endpoint**                                  **Description**
-Get All Employees             GET                           /api/employees                                 Retrieves a list of all employees
-Get Employee by ID            GET                           /api/employees/{id}                            Retrieves a single employee by their ID
-Create Employee               POST                          /api/employees                                 Adds a new employee (with input validation)
-Update Employee               PUT                           /api/employees/{id}                            Updates an existing employee's details
-Delete Employee               DELETE                        /api/employees/{id}                            Removes an employee by ID
+| Operation | HTTP Method | Endpoint | Description |
+| :--- | :--- | :--- | :--- |
+| **Get All Employees** | `GET` | `/api/employees` | Retrieves a list of all employees |
+| **Get Employee by ID** | `GET` | `/api/employees/{id}` | Retrieves a single employee by their ID |
+| **Create Employee** | `POST` | `/api/employees` | Adds a new employee (with input validation) |
+| **Update Employee** | `PUT` | `/api/employees/{id}` | Updates an existing employee's details |
+| **Delete Employee** | `DELETE` | `/api/employees/{id}` | Removes an employee by ID |                           Removes an employee by ID
 
 # Input Validation and Exception Handling:
 * Input Validation: If you try to submit a POST or PUT request with invalid fields (eg: blank names or negative salary), the API triggers @Valid checks and responds with a  400 Bad Request 
