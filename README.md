@@ -50,3 +50,20 @@ http://localhost:8080/api/employees
 * Input Validation: If you try to submit a POST or PUT request with invalid fields (eg: blank names or negative salary), the API triggers @Valid checks and responds with a  400 Bad Request 
 listing the specific constraint issues.
 * Global Exceptions: If you request an ID that does not exist in the database, the global exception handler catches it and returns a  structured JSON error response instead of a stack trace.
+
+#  Database Configuration
+
+This application connects to a **MySQL** database.
+
+1. Ensure MySQL is running on your local machine.
+2. Create a database named `employee_db` :
+   ```
+   CREATE DATABASE employee_db;
+3.Update your src/main/resources/application.properties file with your local MySQL credentials:
+
+`spring.datasource.url=jdbc:mysql://localhost:3306/employee_db?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=your_mysql_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect`
